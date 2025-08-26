@@ -1,15 +1,15 @@
 package programmers;
 
-import programmers.level2.TheMostBigNumber_42746;
+import programmers.level1.NoSameNumber_12906;
 
 public class App {
     public static void main(String[] args) {
         System.out.println();
 
-        var sol = new TheMostBigNumber_42746();
+        var sol = new NoSameNumber_12906();
 
-        Object ans = sol.solution(new int[] { 3, 30, 34, 5, 9 });
+        Object ans = sol.solution(new int[]{1, 1, 3, 3, 0, 1, 1});
 
-        System.out.println("ANSWER: " + ans);
+//        System.out.println("ANSWER: " + ans);
     }
 }
