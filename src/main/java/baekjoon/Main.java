@@ -1,13 +1,19 @@
 package baekjoon;
 
-import programmers.level2.TheBiggestNumber_42746;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println();
 
-        var sol = new TheBiggestNumber_42746();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        System.out.println(sol.solution(new int[]{6, 10, 2}));
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+
+        System.out.println(a + b);
     }
 }
