@@ -3,7 +3,6 @@ package baekjoon.silver5;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
 
 public class GroupWordChecker_1316 {
     public static void main(String[] args) throws IOException {
@@ -13,12 +12,17 @@ public class GroupWordChecker_1316 {
         int count = lineCount;
         for (int i = 0; i < lineCount; i++) {
             String line = br.readLine();
-            HashSet<Character> set = new HashSet<>();
+            boolean[] arr = new boolean[26];
+
             for (int j = 0; j < line.length(); j++) {
-                if (j == line.length() - 1 || line.charAt(j) != line.charAt(j + 1)) {
-                    if (!set.add(line.charAt(j))) {
+                char prevChar = j == 0 ? ' ' : line.charAt(j - 1);
+                if (prevChar != line.charAt(j)) {
+                    int idx = line.charAt(j) - 'a';
+                    if (arr[idx]) {
                         count--;
                         break;
+                    } else {
+                        arr[idx] = true;
                     }
                 }
             }
