@@ -9,17 +9,21 @@ public class LostParenthesis_1541 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line = br.readLine();
 
-        int result = 0;
-        int temp = 0;
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < line.length(); i++) {
-            char c = line.charAt(i);
-            if (c != '+' && c != '-') {
-                sb.append(c);
-            } else {
-                int n = Integer.parseInt(sb.toString());
+        String[] l = line.split("-");
 
+        int result = 0;
+        for (String s : l[0].split("\\+")) {
+            int n = Integer.parseInt(s);
+            result += n;
+        }
+
+        for (int i = 1; i < l.length; i++) {
+            for (String s : l[i].split("\\+")) {
+                int n = Integer.parseInt(s);
+                result -= n;
             }
         }
+
+        System.out.println(result);
     }
 }
