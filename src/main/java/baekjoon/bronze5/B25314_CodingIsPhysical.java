@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class CodingIsPhysical_25314 {
+public class B25314_CodingIsPhysical {
     /*
     자료구조: String
     시간복잡도: O(n)

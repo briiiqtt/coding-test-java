@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class PuttingBall_10810 {
+public class B10810_PuttingBall {
     /*
     자료구조: 배열
     시간복잡도: O(NM)

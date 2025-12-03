@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Counting_10807 {
+public class B10807_Counting {
     /*
     자료구조: 배열
     시간복잡도: O(n)

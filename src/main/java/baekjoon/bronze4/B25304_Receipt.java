@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Receipt_25304 {
+public class B25304_Receipt {
     /*
     자료구조: 4바이트 정수
     시간복잡도: O(n)

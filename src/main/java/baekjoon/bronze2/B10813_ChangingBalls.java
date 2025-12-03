@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ChangingBalls_10813 {
+public class B10813_ChangingBalls {
     /*
     자료구조: 배열
     시간복잡도: O(N+M)

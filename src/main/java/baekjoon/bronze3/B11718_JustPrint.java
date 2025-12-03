@@ -1,12 +1,19 @@
-package baekjoon.bronze5;
+package baekjoon.bronze3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Ah_4999 {
+public class B11718_JustPrint {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println(br.readLine().length() >= br.readLine().length() ? "go" : "no");
+        StringBuilder sb = new StringBuilder();
+
+        int c;
+        while ((c = br.read()) != -1) {
+            sb.append((char) c);
+        }
+
+        System.out.println(sb);
     }
 }
