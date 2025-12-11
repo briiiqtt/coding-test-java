@@ -20,7 +20,8 @@ sb = new StringBuilder()
 FOR i = 0 TO 14:
     FOR j = 0 TO 4:
         IF arr[j].length > i:
-        sb.append(arr[j][i])
+            sb.append(arr[j][i])
+        ENDIF
     ENDFOR
 ENDFOR
 
