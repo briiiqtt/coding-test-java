@@ -7,22 +7,23 @@ import java.io.InputStreamReader;
 public class B2750_SortingNumber {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int lineCount = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
 
         int[] countingArr = new int[2001];
-        for (int i = 0; i < lineCount; i++) {
-            int num = Integer.parseInt(br.readLine()) + 1000;
-            countingArr[num]++;
+
+        for (int i = 0; i < N; i++) {
+            int num = Integer.parseInt(br.readLine());
+            int idx = num + 1000;
+            countingArr[idx] += 1;
         }
 
-        StringBuilder sb = new StringBuilder();
+        var sb = new StringBuilder();
         for (int i = 0; i < countingArr.length; i++) {
-            int count = countingArr[i];
-            while (count-- > 0) {
+            for (int j = 0; j < countingArr[i]; j++) {
                 sb.append(i - 1000).append("\n");
             }
         }
-
+        
         System.out.println(sb);
     }
 }
