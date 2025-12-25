@@ -1,18 +1,15 @@
 package sort;
 
 public class SelectionSort {
-    public int[] ascend(int[] arr) {
+    public void execute(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
-            int minValueIndex = i;
+            int minValIdx = i;
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[minValueIndex]) {
-                    minValueIndex = j;
-                }
+                if (arr[minValIdx] > arr[j]) minValIdx = j;
             }
-            int temp = arr[i];
-            arr[i] = arr[minValueIndex];
-            arr[minValueIndex] = temp;
+            int temp = arr[minValIdx];
+            arr[minValIdx] = arr[i];
+            arr[i] = temp;
         }
-        return arr;
     }
 }
