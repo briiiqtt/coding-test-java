@@ -31,7 +31,7 @@ package programmers.level2;
 
 import java.util.Arrays;
 
-public class PhoneNumList_42577 {
+public class P42577_PhoneNumList {
     public boolean solution(String[] phone_book) {
 
         Arrays.sort(phone_book);

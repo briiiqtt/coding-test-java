@@ -48,7 +48,7 @@ package programmers.level1;
 
 import java.util.HashSet;
 
-public class Ponkemon_1845 {
+public class P1845_Ponkemon {
 
     public int solution(int[] nums) {
         int answer = 0;

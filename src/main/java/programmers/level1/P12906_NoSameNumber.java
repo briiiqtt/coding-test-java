@@ -23,7 +23,7 @@ arr	answer
 [4,4,4,3,3]	[4,3]
 
 */
-public class NoSameNumber_12906 {
+public class P12906_NoSameNumber {
     public int[] solution(int[] arr) {
 
         ArrayList<Integer> list = new ArrayList<>();

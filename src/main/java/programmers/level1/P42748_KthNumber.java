@@ -26,7 +26,7 @@ package programmers.level1;
 
 import java.util.*;
 
-public class KthNumber_42748 {
+public class P42748_KthNumber {
     public int[] solution(int[] array, int[][] commands) {
 
         int[] answer = new int[commands.length];

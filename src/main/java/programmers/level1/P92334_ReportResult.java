@@ -2,7 +2,7 @@ package programmers.level1;
 
 import java.util.*;
 
-public class ReportResult_92334 {
+public class P92334_ReportResult {
     public int[] solution(String[] id_list, String[] report, int k) {
         int[] answer = new int[id_list.length];
 

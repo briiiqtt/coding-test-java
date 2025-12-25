@@ -3,7 +3,7 @@ package programmers.level1;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class BoxPop_389478 {
+public class P389478_BoxPop {
 
     public int solution(int n, int w, int num) {
         int answer = 0;

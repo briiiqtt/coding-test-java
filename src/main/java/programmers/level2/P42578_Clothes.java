@@ -45,7 +45,7 @@ package programmers.level2;
 
 import java.util.*;
 
-public class Clothes_42578 {
+public class P42578_Clothes {
     public int solution(String[][] clothes) {
 
         HashMap<String, List<String>> hm = new HashMap<>();

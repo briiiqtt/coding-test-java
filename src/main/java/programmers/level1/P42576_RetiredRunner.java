@@ -31,7 +31,7 @@ package programmers.level1;
 
 import java.util.HashMap;
 
-public class RetiredRunner_42576 {
+public class P42576_RetiredRunner {
 
     public String solution(String[] participant, String[] completion) {
         String answer = "";

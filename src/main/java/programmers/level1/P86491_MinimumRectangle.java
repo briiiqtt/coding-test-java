@@ -45,7 +45,7 @@ sizes	result
 명함들을 적절히 회전시켜 겹쳤을 때, 모든 명함을 포함하는 가장 작은 지갑의 크기는 133(=19 x 7)입니다.
 */
 
-public class MinimumRectangle_86491 {
+public class P86491_MinimumRectangle {
     public int solution(int[][] sizes) {
         int maxLargerSide = 0;
         int maxSmallerSide = 0;
