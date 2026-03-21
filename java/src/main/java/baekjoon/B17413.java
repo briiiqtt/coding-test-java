@@ -12,16 +12,20 @@ public class B17413 {
     public static void main(String[] args) throws IOException {
         char[] chars = new BufferedReader(new InputStreamReader(System.in)).readLine().toCharArray();
 
+        boolean tag = false;
         for (int i = 0; i < chars.length; i++) {
             char c = chars[i];
-            if (c == '<' || c == ' ') {
+            if (c == '<') {
+                tag = true;
                 flushStackIntoSB();
-                if (c == '<') {
-                    while ((c = chars[i]) != '>') {
-                        sb.append(c);
-                        i++;
-                    }
-                }
+                sb.append(c);
+            } else if (c == '>') {
+                tag = false;
+                sb.append(c);
+            } else if (c == ' ') {
+                flushStackIntoSB();
+                sb.append(c);
+            } else if (tag) {
                 sb.append(c);
             } else {
                 stack.push(c);
