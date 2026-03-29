@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-
 // const input: string = fs.readFileSync('/dev/stdin').toString();
 const input: string = fs.readFileSync('./input.txt').toString();
 
