@@ -8,16 +8,16 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Icecream {
-    static boolean[][] visit;
     static int N, M;
     static boolean[][] graph;
+    static int[] dx = new int[]{-1, 1, 0, 0};
+    static int[] dy = new int[]{0, 0, 1, -1};
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        visit = new boolean[N][M];
 
         graph = new boolean[N][M];
 
@@ -31,7 +31,7 @@ public class Icecream {
         int cnt = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                if (!visit[i][j] && !graph[i][j]) {
+                if (!graph[i][j]) {
                     dfs(i, j);
                     cnt++;
                 }
@@ -41,12 +41,16 @@ public class Icecream {
         System.out.println(cnt);
     }
 
-    static void dfs(int n, int m) {
-        if (visit[n][m]) return;
-        visit[n][m] = true;
-        if (n > 0 && !graph[n - 1][m]) dfs(n - 1, m);
-        if (n < N - 1 && !graph[n + 1][m]) dfs(n + 1, m);
-        if (m > 0 && !graph[n][m - 1]) dfs(n, m - 1);
-        if (m < M - 1 && !graph[n][m + 1]) dfs(n, m + 1);
+    static void dfs(int x, int y) {
+        graph[x][y] = true;
+
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (0 <= nx && 0 <= ny && nx < N && ny < M && !graph[nx][ny]) {
+                dfs(nx, ny);
+            }
+        }
     }
 }
